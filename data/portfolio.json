@@ -9,7 +9,18 @@
   "darkMode": true,
   "showResume": true,
   "resume": {
-    "resumeUrl": "/Mia_Gayapersad_resume.pdf"
+    "resumeUrl": "/Mia_Gayapersad_resume.pdf",
+    "tagline": "👋 Digital artist and tech enthusiast.",
+    "description": "I explore the intersection of creativity and technology through digital art and web projects.",
+    "experiences": [],
+    "education": {
+      "universityName": "University of the West Indies",
+      "universityDate": "2023 - Present",
+      "universityPara": "Currently pursuing a Computer Science degree focusing on creative technologies, web development, and digital media."
+    },
+    "languages": ["Javascript","HTML5","CSS","Python"],
+    "frameworks": ["React","NodeJs"],
+    "others": ["Figma","Adobe Photoshop","Adobe Illustrator"]
   },
   "socials": [
     {
@@ -27,5 +38,39 @@
       "title": "Email",
       "link": "mailto:gayapersadmia@gmail.com"
     }
-  ]
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Digital Art Portfolio",
+      "description": "A showcase of my digital artwork and creative projects.",
+      "imageSrc": "/images/MIA.jpg",
+      "url": "https://github.com/mializzie"
+    },
+    {
+      "id": "2",
+      "title": "Tech Projects",
+      "description": "Examples of my creative coding and tech experiments.",
+      "imageSrc": "/images/MIA.jpg",
+      "url": "https://github.com/mializzie"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Digital Art",
+      "description": "Creating digital artwork, illustrations, and visual designs for personal and professional projects."
+    },
+    {
+      "id": "2",
+      "title": "Creative Coding",
+      "description": "Experimenting with interactive web projects and coding-based art."
+    },
+    {
+      "id": "3",
+      "title": "Web Projects",
+      "description": "Building visually appealing websites and digital experiences."
+    }
+  ],
+  "aboutpara": "I'm Mia Gayapersad from Trinidad, a digital artist and tech enthusiast. I blend creativity with technology to create artwork, web projects, and interactive experiences. My work is driven by curiosity, exploration, and the desire to bring ideas to life."
 }
