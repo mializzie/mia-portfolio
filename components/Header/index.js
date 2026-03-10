@@ -6,12 +6,15 @@ import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
+const Header = ({ handleWorkScroll, handleAboutScroll }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  const { name, showBlog, showResume } = data;
+  const { name, showResume } = data;
+
+  // Get your email from data
+  const email = data.socials.find((s) => s.title === "Email")?.link.replace("mailto:", "");
 
   useEffect(() => {
     setMounted(true);
@@ -23,12 +26,20 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
-                onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"
-              >
-                {name}.
-              </h1>
+              <div className="flex items-center">
+                <h1
+                  onClick={() => router.push("/")}
+                  className="font-medium p-2 laptop:p-0 link"
+                >
+                  {name}.
+                </h1>
+                {/* Your Photo */}
+                <img
+                  src="/images/MIA.jpg"
+                  alt="Mia Gayapersad"
+                  className="w-16 h-16 rounded-full ml-2"
+                />
+              </div>
 
               <div className="flex items-center">
                 {data.darkMode && (
@@ -39,10 +50,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   >
                     <img
                       className="h-6"
-                      src={`/images/${
-                        theme === "dark" ? "moon.svg" : "sun.svg"
-                      }`}
-                    ></img>
+                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                    />
                   </Button>
                 )}
 
@@ -58,138 +67,78 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         ? "cancel.svg"
                         : "cancel-white.svg"
                     }`}
-                  ></img>
+                  />
                 </Popover.Button>
               </div>
             </div>
+
             <Popover.Panel
               className={`absolute right-0 z-10 w-11/12 p-4 ${
                 theme === "dark" ? "bg-slate-800" : "bg-white"
               } shadow-md rounded-md`}
             >
-              {!isBlog ? (
-                <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
-                  {showResume && (
-                    <Button
-                      onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
-                      }
-                    >
-                      Resume
-                    </Button>
-                  )}
-
+              <div className="grid grid-cols-1">
+                <Button onClick={handleWorkScroll}>Work</Button>
+                <Button onClick={handleAboutScroll}>About</Button>
+                {showResume && (
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    onClick={() => router.push("/resume")}
                   >
-                    Contact
+                    Resume
                   </Button>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1">
-                  <Button onClick={() => router.push("/")} classes="first:ml-1">
-                    Home
-                  </Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
-                  {showResume && (
-                    <Button
-                      onClick={() => router.push("/resume")}
-                      classes="first:ml-1"
-                    >
-                      Resume
-                    </Button>
-                  )}
-
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
-                    Contact
-                  </Button>
-                </div>
-              )}
+                )}
+                <Button onClick={() => window.open(`mailto:${email}`)}>
+                  Contact
+                </Button>
+              </div>
             </Popover.Panel>
           </>
         )}
       </Popover>
+
       <div
         className={`mt-10 hidden flex-row items-center justify-between sticky ${
           theme === "light" && "bg-white"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
-        <h1
-          onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
-        >
-          {name}.
-        </h1>
-        {!isBlog ? (
-          <div className="flex">
-            <Button onClick={handleWorkScroll}>Work</Button>
-            <Button onClick={handleAboutScroll}>About</Button>
-            {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
-            {showResume && (
-              <Button
-                onClick={() => router.push("/resume")}
-                classes="first:ml-1"
-              >
-                Resume
-              </Button>
-            )}
+        <div className="flex items-center">
+          <h1
+            onClick={() => router.push("/")}
+            className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+          >
+            {name}.
+          </h1>
+          <img
+            src="/images/MIA.jpg"
+            alt="Mia Gayapersad"
+            className="w-16 h-16 rounded-full ml-2"
+          />
+        </div>
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
+        <div className="flex">
+          <Button onClick={handleWorkScroll}>Work</Button>
+          <Button onClick={handleAboutScroll}>About</Button>
+          {showResume && (
+            <Button
+              onClick={() => router.push("/resume")}
+              classes="first:ml-1"
+            >
+              Resume
             </Button>
-            {mounted && theme && data.darkMode && (
-              <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                <img
-                  className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
-              </Button>
-            )}
-          </div>
-        ) : (
-          <div className="flex">
-            <Button onClick={() => router.push("/")}>Home</Button>
-            {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
-            {showResume && (
-              <Button
-                onClick={() => router.push("/resume")}
-                classes="first:ml-1"
-              >
-                Resume
-              </Button>
-            )}
+          )}
+          <Button onClick={() => window.open(`mailto:${email}`)}>Contact</Button>
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
+          {mounted && theme && data.darkMode && (
+            <Button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              <img
+                className="h-6"
+                src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+              />
             </Button>
-
-            {mounted && theme && data.darkMode && (
-              <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                <img
-                  className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
-              </Button>
-            )}
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </>
   );
