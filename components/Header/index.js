@@ -1,8 +1,8 @@
 import { Popover } from "@headlessui/react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import data from "../../data/portfolio.json";
 
@@ -12,7 +12,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const [mounted, setMounted] = useState(false);
   const { name, showBlog, showResume, resume } = data;
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const resumeClick = () => {
     window.open(resume.resumeUrl, "_blank");
@@ -25,6 +27,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {({ open }) => (
           <>
             <div className="flex flex-col items-center">
+              {/* Profile Picture */}
               <Image
                 src="/images/MIA.jpg"
                 alt="Mia Gayapersad"
@@ -32,29 +35,31 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 height={80}
                 className="rounded-full mb-2"
               />
+              {/* Name */}
               <h1
                 onClick={() => router.push("/")}
                 className="font-medium text-xl mb-2 cursor-pointer"
               >
                 {name}.
               </h1>
-              <div className="flex items-center space-x-2">
+              {/* Navigation Buttons */}
+              <div className="flex items-center space-x-2 mb-2">
                 {data.darkMode && mounted && (
                   <Button
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
-                    <Image
+                    <img
+                      className="h-6"
                       src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                      alt="theme icon"
-                      width={24}
-                      height={24}
+                      alt="theme toggle"
                     />
                   </Button>
                 )}
                 <Popover.Button>
-                  <Image
+                  <img
+                    className="h-5"
                     src={`/images/${
                       !open
                         ? theme === "dark"
@@ -64,12 +69,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         ? "cancel.svg"
                         : "cancel-white.svg"
                     }`}
-                    alt="menu"
-                    width={20}
-                    height={20}
+                    alt="menu toggle"
                   />
                 </Popover.Button>
               </div>
+
               <Popover.Panel
                 className={`absolute right-0 z-10 w-11/12 p-4 ${
                   theme === "dark" ? "bg-slate-800" : "bg-white"
@@ -99,7 +103,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
       {/* Desktop Header */}
       <div
         className={`hidden tablet:flex flex-col items-center mt-10 sticky top-0 z-10 ${
-          theme === "light" ? "bg-white" : ""
+          theme === "light" && "bg-white"
         } dark:text-white`}
       >
         <Image
@@ -120,22 +124,17 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           <Button onClick={handleAboutScroll}>About</Button>
           {showBlog && <Button onClick={() => router.push("/blog")}>Blog</Button>}
           {showResume && <Button onClick={resumeClick}>Resume</Button>}
-          <Button
-            onClick={() => window.open("mailto:gayapersadmia@gmail.com")}
-          >
+          <Button onClick={() => window.open("mailto:gayapersadmia@gmail.com")}>
             Contact
           </Button>
           {mounted && theme && data.darkMode && (
             <Button
-              onClick={() =>
-                setTheme(theme === "dark" ? "light" : "dark")
-              }
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
-              <Image
+              <img
+                className="h-6"
                 src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                alt="theme icon"
-                width={24}
-                height={24}
+                alt="theme toggle"
               />
             </Button>
           )}
