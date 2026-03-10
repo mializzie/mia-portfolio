@@ -30,7 +30,7 @@
       "id": "1",
       "title": "Digital Art Portfolio",
       "description": "A showcase of my digital artwork and creative projects.",
-      "imageSrc": "/images/MIA.jpg",
+      "imageSrc": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=60",
       "url": "https://github.com/mializzie"
     },
     {
@@ -60,9 +60,9 @@
   ],
   "aboutpara": "I'm Mia Gayapersad from Trinidad, a digital artist and tech enthusiast. I blend creativity with technology to create artwork, web projects, and interactive experiences. My work is driven by curiosity, exploration, and the desire to bring ideas to life.",
   "resume": {
+    "resumeUrl": "/Mia Gayapersad resume.pdf",
     "tagline": "👋  Digital artist and tech enthusiast.",
     "description": "I explore the intersection of creativity and technology through digital art and web projects.",
-    "file": "/resume/Mia Gayapersad resume.pdf",
     "experiences": [],
     "education": {
       "universityName": "University of the West Indies",
