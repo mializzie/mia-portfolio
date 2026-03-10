@@ -16,7 +16,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   }, []);
 
   const resumeClick = () => {
-    window.open(resume.resumeUrl, "_blank");
+    // Opens the PDF in a new tab
+    window.open("/Mia Gayapersad resume.pdf", "_blank");
   };
 
   return (
@@ -25,98 +26,62 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
       <Popover className="block tablet:hidden mt-5">
         {({ open }) => (
           <>
-            <div className="flex items-center justify-between p-2 laptop:p-0">
-              <div className="flex flex-col items-center">
-                {/* Profile Picture Circle */}
-                <img
-                  src="/images/MIA.jpg"
-                  alt="Mia Gayapersad"
-                  className="w-20 h-20 rounded-full object-cover mb-2"
-                />
-                <h1
-                  onClick={() => router.push("/")}
-                  className="font-medium p-2 laptop:p-0 link"
-                >
-                  {name}.
-                </h1>
-              </div>
-              <div className="flex items-center">
+            <div className="flex flex-col items-center">
+              {/* Profile Picture */}
+              <img
+                src="/images/MIA.jpg"
+                alt="Mia Gayapersad"
+                className="w-20 h-20 rounded-full mb-2"
+              />
+              {/* Name */}
+              <h1 onClick={() => router.push("/")} className="font-medium text-xl mb-2 cursor-pointer">
+                {name}.
+              </h1>
+              {/* Navigation Buttons */}
+              <div className="flex items-center space-x-2">
                 {data.darkMode && mounted && (
                   <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-                    <img
-                      className="h-6"
-                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                    />
+                    <img className="h-6" src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`} />
                   </Button>
                 )}
                 <Popover.Button>
                   <img
                     className="h-5"
-                    src={`/images/${
-                      !open
-                        ? theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light"
-                        ? "cancel.svg"
-                        : "cancel-white.svg"
-                    }`}
+                    src={`/images/${!open ? (theme === "dark" ? "menu-white.svg" : "menu.svg") : theme === "light" ? "cancel.svg" : "cancel-white.svg"}`}
                   />
                 </Popover.Button>
               </div>
+              <Popover.Panel className={`absolute right-0 z-10 w-11/12 p-4 ${theme === "dark" ? "bg-slate-800" : "bg-white"} shadow-md rounded-md mt-2`}>
+                <div className="grid grid-cols-1 gap-2">
+                  <Button onClick={handleWorkScroll}>Work</Button>
+                  <Button onClick={handleAboutScroll}>About</Button>
+                  {showBlog && <Button onClick={() => router.push("/blog")}>Blog</Button>}
+                  {showResume && <Button onClick={resumeClick}>Resume</Button>}
+                  <Button onClick={() => window.open("mailto:gayapersadmia@gmail.com")}>Contact</Button>
+                </div>
+              </Popover.Panel>
             </div>
-            <Popover.Panel
-              className={`absolute right-0 z-10 w-11/12 p-4 ${
-                theme === "dark" ? "bg-slate-800" : "bg-white"
-              } shadow-md rounded-md`}
-            >
-              <div className="grid grid-cols-1">
-                <Button onClick={handleWorkScroll}>Work</Button>
-                <Button onClick={handleAboutScroll}>About</Button>
-                {showBlog && <Button onClick={() => router.push("/blog")}>Blog</Button>}
-                {showResume && <Button onClick={resumeClick}>Resume</Button>}
-                <Button onClick={() => window.open("mailto:gayapersadmia@gmail.com")}>
-                  Contact
-                </Button>
-              </div>
-            </Popover.Panel>
           </>
         )}
       </Popover>
 
       {/* Desktop Header */}
-      <div
-        className={`mt-10 hidden flex-col items-center justify-center sticky ${
-          theme === "light" && "bg-white"
-        } dark:text-white top-0 z-10 tablet:flex`}
-      >
-        {/* Profile Picture Circle */}
+      <div className={`hidden tablet:flex flex-col items-center mt-10 sticky top-0 z-10 ${theme === "light" && "bg-white"} dark:text-white`}>
         <img
           src="/images/MIA.jpg"
           alt="Mia Gayapersad"
-          className="w-24 h-24 rounded-full object-cover mb-3"
+          className="w-24 h-24 rounded-full mb-2"
         />
-        <h1
-          onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0 text-center"
-        >
-          {name}.
-        </h1>
-
-        <div className="flex mt-3 gap-3">
+        <h1 onClick={() => router.push("/")} className="font-medium text-2xl mb-4 cursor-pointer">{name}.</h1>
+        <div className="flex items-center space-x-4">
           <Button onClick={handleWorkScroll}>Work</Button>
           <Button onClick={handleAboutScroll}>About</Button>
           {showBlog && <Button onClick={() => router.push("/blog")}>Blog</Button>}
           {showResume && <Button onClick={resumeClick}>Resume</Button>}
-          <Button onClick={() => window.open("mailto:gayapersadmia@gmail.com")}>
-            Contact
-          </Button>
+          <Button onClick={() => window.open("mailto:gayapersadmia@gmail.com")}>Contact</Button>
           {mounted && theme && data.darkMode && (
             <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-              <img
-                className="h-6"
-                src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-              />
+              <img className="h-6" src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`} />
             </Button>
           )}
         </div>
