@@ -1,7 +1,6 @@
 import { Popover } from "@headlessui/react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import data from "../../data/portfolio.json";
@@ -12,9 +11,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const [mounted, setMounted] = useState(false);
   const { name, showBlog, showResume, resume } = data;
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
   const resumeClick = () => {
     window.open(resume.resumeUrl, "_blank");
@@ -28,12 +25,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           <>
             <div className="flex flex-col items-center">
               {/* Profile Picture */}
-              <Image
+              <img
                 src="/images/MIA.jpg"
                 alt="Mia Gayapersad"
-                width={80}
-                height={80}
-                className="rounded-full mb-2"
+                className="w-20 h-20 rounded-full mb-2"
               />
               {/* Name */}
               <h1
@@ -42,18 +37,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               >
                 {name}.
               </h1>
-              {/* Navigation Buttons */}
-              <div className="flex items-center space-x-2 mb-2">
+              {/* Nav + Dark Mode */}
+              <div className="flex items-center space-x-2">
                 {data.darkMode && mounted && (
-                  <Button
-                    onClick={() =>
-                      setTheme(theme === "dark" ? "light" : "dark")
-                    }
-                  >
+                  <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
                     <img
                       className="h-6"
                       src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                      alt="theme toggle"
                     />
                   </Button>
                 )}
@@ -69,11 +59,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         ? "cancel.svg"
                         : "cancel-white.svg"
                     }`}
-                    alt="menu toggle"
                   />
                 </Popover.Button>
               </div>
-
               <Popover.Panel
                 className={`absolute right-0 z-10 w-11/12 p-4 ${
                   theme === "dark" ? "bg-slate-800" : "bg-white"
@@ -82,15 +70,16 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <div className="grid grid-cols-1 gap-2">
                   <Button onClick={handleWorkScroll}>Work</Button>
                   <Button onClick={handleAboutScroll}>About</Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
+                  {showBlog && <Button onClick={() => router.push("/blog")}>Blog</Button>}
+                  {showResume && (
+                    <Button
+                      onClick={resumeClick}
+                      style={{ backgroundColor: "black", color: "white" }}
+                    >
+                      Resume
+                    </Button>
                   )}
-                  {showResume && <Button onClick={resumeClick}>Resume</Button>}
-                  <Button
-                    onClick={() =>
-                      window.open("mailto:gayapersadmia@gmail.com")
-                    }
-                  >
+                  <Button onClick={() => window.open("mailto:gayapersadmia@gmail.com")}>
                     Contact
                   </Button>
                 </div>
@@ -106,12 +95,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           theme === "light" && "bg-white"
         } dark:text-white`}
       >
-        <Image
+        <img
           src="/images/MIA.jpg"
           alt="Mia Gayapersad"
-          width={96}
-          height={96}
-          className="rounded-full mb-2"
+          className="w-24 h-24 rounded-full mb-2"
         />
         <h1
           onClick={() => router.push("/")}
@@ -123,18 +110,22 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           <Button onClick={handleWorkScroll}>Work</Button>
           <Button onClick={handleAboutScroll}>About</Button>
           {showBlog && <Button onClick={() => router.push("/blog")}>Blog</Button>}
-          {showResume && <Button onClick={resumeClick}>Resume</Button>}
+          {showResume && (
+            <Button
+              onClick={resumeClick}
+              style={{ backgroundColor: "black", color: "white" }}
+            >
+              Resume
+            </Button>
+          )}
           <Button onClick={() => window.open("mailto:gayapersadmia@gmail.com")}>
             Contact
           </Button>
           {mounted && theme && data.darkMode && (
-            <Button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
+            <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
               <img
                 className="h-6"
                 src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                alt="theme toggle"
               />
             </Button>
           )}
