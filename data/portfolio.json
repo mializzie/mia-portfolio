@@ -1,3 +1,4 @@
+
 {
   "name": "Mia Gayapersad",
   "headerTaglineOne": "Hello 👋",
@@ -18,9 +19,9 @@
       "universityDate": "2023 - Present",
       "universityPara": "Currently pursuing a Computer Science degree focusing on creative technologies, web development, and digital media."
     },
-    "languages": ["Javascript","HTML5","CSS","Python"],
-    "frameworks": ["React","NodeJs"],
-    "others": ["Figma","Adobe Photoshop","Adobe Illustrator"]
+    "languages": ["Javascript", "HTML5", "CSS", "Python"],
+    "frameworks": ["React", "NodeJs"],
+    "others": ["Figma", "Adobe Photoshop", "Adobe Illustrator"]
   },
   "socials": [
     {
