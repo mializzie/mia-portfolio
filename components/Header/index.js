@@ -1,3 +1,4 @@
+
 import { Popover } from "@headlessui/react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
@@ -9,12 +10,21 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const { name, showBlog, showResume, resume } = data;
+  const { name, showBlog, showResume } = data;
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const resumeClick = () => {
-    window.open(resume.resumeUrl, "_blank");
+    window.open("/Mia_Gayapersad_resume.pdf", "_blank");
+  };
+
+  const scheduleCall = () => {
+    window.open(
+      "mailto:gayapersadmia@gmail.com?subject=Schedule a Call",
+      "_blank"
+    );
   };
 
   return (
@@ -24,21 +34,19 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {({ open }) => (
           <>
             <div className="flex flex-col items-center">
-              {/* Profile Picture */}
               <img
                 src="/images/MIA.jpg"
                 alt="Mia Gayapersad"
                 className="w-20 h-20 rounded-full mb-2"
               />
-              {/* Name */}
               <h1
                 onClick={() => router.push("/")}
                 className="font-medium text-xl mb-2 cursor-pointer"
               >
                 {name}.
               </h1>
-              {/* Nav + Dark Mode */}
-              <div className="flex items-center space-x-2">
+
+              <div className="flex items-center space-x-2 mb-2">
                 {data.darkMode && mounted && (
                   <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
                     <img
@@ -62,6 +70,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   />
                 </Popover.Button>
               </div>
+
               <Popover.Panel
                 className={`absolute right-0 z-10 w-11/12 p-4 ${
                   theme === "dark" ? "bg-slate-800" : "bg-white"
@@ -72,13 +81,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Button onClick={handleAboutScroll}>About</Button>
                   {showBlog && <Button onClick={() => router.push("/blog")}>Blog</Button>}
                   {showResume && (
-                    <Button
-                      onClick={resumeClick}
-                      style={{ backgroundColor: "black", color: "white" }}
-                    >
+                    <Button onClick={resumeClick} classes="bg-black text-white">
                       Resume
                     </Button>
                   )}
+                  <Button onClick={scheduleCall} classes="bg-black text-white">
+                    Schedule a Call
+                  </Button>
                   <Button onClick={() => window.open("mailto:gayapersadmia@gmail.com")}>
                     Contact
                   </Button>
@@ -106,18 +115,19 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         >
           {name}.
         </h1>
+
         <div className="flex items-center space-x-4">
           <Button onClick={handleWorkScroll}>Work</Button>
           <Button onClick={handleAboutScroll}>About</Button>
           {showBlog && <Button onClick={() => router.push("/blog")}>Blog</Button>}
           {showResume && (
-            <Button
-              onClick={resumeClick}
-              style={{ backgroundColor: "black", color: "white" }}
-            >
+            <Button onClick={resumeClick} classes="bg-black text-white">
               Resume
             </Button>
           )}
+          <Button onClick={scheduleCall} classes="bg-black text-white">
+            Schedule a Call
+          </Button>
           <Button onClick={() => window.open("mailto:gayapersadmia@gmail.com")}>
             Contact
           </Button>
