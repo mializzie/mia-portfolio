@@ -18,9 +18,9 @@
       "universityDate": "2023 - Present",
       "universityPara": "Currently pursuing a Computer Science degree focusing on creative technologies, web development, and digital media."
     },
-    "languages": ["Javascript","HTML5","CSS","Python"],
-    "frameworks": ["React","NodeJs"],
-    "others": ["Figma","Adobe Photoshop","Adobe Illustrator"]
+    "languages": ["Javascript", "HTML5", "CSS", "Python"],
+    "frameworks": ["React", "NodeJs"],
+    "others": ["Figma", "Adobe Photoshop", "Adobe Illustrator"]
   },
   "socials": [
     {
@@ -31,7 +31,7 @@
     {
       "id": "2",
       "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/mia-gayapersad-433125211?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+      "link": "https://www.linkedin.com/in/mia-gayapersad-433125211/"
     },
     {
       "id": "3",
@@ -44,14 +44,14 @@
       "id": "1",
       "title": "Digital Art Portfolio",
       "description": "A showcase of my digital artwork and creative projects.",
-      "imageSrc": "/images/MIA.jpg",
+      "imageSrc": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=60",
       "url": "https://github.com/mializzie"
     },
     {
       "id": "2",
       "title": "Tech Projects",
       "description": "Examples of my creative coding and tech experiments.",
-      "imageSrc": "/images/MIA.jpg",
+      "imageSrc": "https://images.unsplash.com/photo-1581092795369-9a89a70c6f3a?auto=format&fit=crop&w=400&q=60",
       "url": "https://github.com/mializzie"
     }
   ],
