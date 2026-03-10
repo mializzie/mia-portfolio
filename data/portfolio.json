@@ -9,18 +9,7 @@
   "darkMode": true,
   "showResume": true,
   "resume": {
-    "resumeUrl": "/Mia_Gayapersad_resume.pdf",
-    "tagline": "👋 Digital artist and tech enthusiast.",
-    "description": "I explore the intersection of creativity and technology through digital art and web projects.",
-    "experiences": [],
-    "education": {
-      "universityName": "University of the West Indies",
-      "universityDate": "2023 - Present",
-      "universityPara": "Currently pursuing a Computer Science degree focusing on creative technologies, web development, and digital media."
-    },
-    "languages": ["Javascript", "HTML5", "CSS", "Python"],
-    "frameworks": ["React", "NodeJs"],
-    "others": ["Figma", "Adobe Photoshop", "Adobe Illustrator"]
+    "resumeUrl": "/Mia_Gayapersad_resume.pdf"
   },
   "socials": [
     {
@@ -31,7 +20,7 @@
     {
       "id": "2",
       "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/mia-gayapersad-433125211/"
+      "link": "https://www.linkedin.com/in/mia-gayapersad-433125211?utm_source=share_via&utm_content=profile&utm_medium=member_android"
     },
     {
       "id": "3",
@@ -44,7 +33,7 @@
       "id": "1",
       "title": "Digital Art Portfolio",
       "description": "A showcase of my digital artwork and creative projects.",
-      "imageSrc": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=60",
+      "imageSrc": "/images/digitalart.jpg",
       "url": "https://github.com/mializzie"
     },
     {
@@ -72,5 +61,8 @@
       "description": "Building visually appealing websites and digital experiences."
     }
   ],
-  "aboutpara": "I'm Mia Gayapersad from Trinidad, a digital artist and tech enthusiast. I blend creativity with technology to create artwork, web projects, and interactive experiences. My work is driven by curiosity, exploration, and the desire to bring ideas to life."
+  "aboutpara": "I'm Mia Gayapersad from Trinidad, a digital artist and tech enthusiast. I blend creativity with technology to create artwork, web projects, and interactive experiences. My work is driven by curiosity, exploration, and the desire to bring ideas to life.",
+  "languages": ["Javascript","HTML5","CSS","Python"],
+  "frameworks": ["React","NodeJs"],
+  "others": ["Figma","Adobe Photoshop","Adobe Illustrator"]
 }
