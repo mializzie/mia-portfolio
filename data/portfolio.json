@@ -3,13 +3,24 @@
   "headerTaglineOne": "Hello 👋",
   "headerTaglineTwo": "I'm Mia Gayapersad - curious",
   "headerTaglineThree": "digital artist & tech enthusiast",
-  "headerTaglineFour": " based in Trinidad & Tobago.",
+  "headerTaglineFour": "based in Trinidad & Tobago.",
   "showCursor": true,
   "showBlog": false,
   "darkMode": true,
   "showResume": true,
   "resume": {
-    "resumeUrl": "/Mia_Gayapersad_resume.pdf"
+    "resumeUrl": "/Mia_Gayapersad_resume.pdf",
+    "tagline": "👋 Digital artist and tech enthusiast.",
+    "description": "I explore the intersection of creativity and technology through digital art and web projects.",
+    "experiences": [],
+    "education": {
+      "universityName": "University of the West Indies",
+      "universityDate": "2023 - Present",
+      "universityPara": "Currently pursuing a Computer Science degree focusing on creative technologies, web development, and digital media."
+    },
+    "languages": ["Javascript","HTML5","CSS","Python"],
+    "frameworks": ["React","NodeJs"],
+    "others": ["Figma","Adobe Photoshop","Adobe Illustrator"]
   },
   "socials": [
     {
@@ -40,7 +51,7 @@
       "id": "2",
       "title": "Tech Projects",
       "description": "Examples of my creative coding and tech experiments.",
-      "imageSrc": "/images/tech.jpg",
+      "imageSrc": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=60",
       "url": "https://github.com/mializzie"
     }
   ],
@@ -61,8 +72,5 @@
       "description": "Building visually appealing websites and digital experiences."
     }
   ],
-  "aboutpara": "I'm Mia Gayapersad from Trinidad, a digital artist and tech enthusiast. I blend creativity with technology to create artwork, web projects, and interactive experiences. My work is driven by curiosity, exploration, and the desire to bring ideas to life.",
-  "languages": ["Javascript","HTML5","CSS","Python"],
-  "frameworks": ["React","NodeJs"],
-  "others": ["Figma","Adobe Photoshop","Adobe Illustrator"]
+  "aboutpara": "I'm Mia Gayapersad from Trinidad, a digital artist and tech enthusiast. I blend creativity with technology to create artwork, web projects, and interactive experiences. My work is driven by curiosity, exploration, and the desire to bring ideas to life."
 }
