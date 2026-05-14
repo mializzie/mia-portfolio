@@ -31,21 +31,9 @@
     "others": ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Database & SQL", "Graphic Design"]
   },
   "socials": [
-    {
-      "id": "1",
-      "title": "Github",
-      "link": "https://github.com/mializzie"
-    },
-    {
-      "id": "2",
-      "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/miagayapersad"
-    },
-    {
-      "id": "3",
-      "title": "Email",
-      "link": "mailto:gayapersadmia@gmail.com"
-    }
+    { "id": "1", "title": "Github", "link": "https://github.com/mializzie" },
+    { "id": "2", "title": "LinkedIn", "link": "https://www.linkedin.com/in/miagayapersad" },
+    { "id": "3", "title": "Email", "link": "mailto:gayapersadmia@gmail.com" }
   ],
   "projects": [
     {
@@ -66,14 +54,14 @@
       "id": "3",
       "title": "Styl GIF Gallery",
       "description": "An interactive GIF gallery showcasing animated digital artwork and styled visual content.",
-      "imageSrc": "/images/styl-gif.png",
+      "imageSrc": "/images/digital-art.png",
       "url": "https://styl-gif.vercel.app/index.html#gifs"
     },
     {
       "id": "4",
       "title": "Art Site",
       "description": "A personal art website displaying original digital artwork and creative explorations.",
-      "imageSrc": "/images/art-site.png",
+      "imageSrc": "/images/digital-art.png",
       "url": "https://art-site-snowy.vercel.app/index.html"
     }
   ],
