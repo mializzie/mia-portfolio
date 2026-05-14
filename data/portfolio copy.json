@@ -1,72 +1,82 @@
-
-
 {
-"name": "Mia Gayapersad",
-"headerTaglineOne": "Hello 👋",
-"headerTaglineTwo": "I'm Mia Gayapersad - curious",
-"headerTaglineThree": "digital artist & aspiring software developer",
-"headerTaglineFour": "based in Trinidad & Tobago.",
-"showCursor": true,
-"showBlog": false,
-"darkMode": true,
-"showResume": true,
-"resume": {
-"resumeUrl": "/Mia_Gayapersad_resume.pdf"
-},
-"socials": [
-{
-"id": "1",
-"title": "Github",
-"link": "https://github.com/mializzie"
-},
-{
-"id": "2",
-"title": "LinkedIn",
-"link": "https://www.linkedin.com/in/miagayapersad"
-},
-{
-"id": "3",
-"title": "Email",
-"link": "mailto:gayapersadmia@gmail.com"
+  "name": "Mia Gayapersad",
+  "headerTaglineOne": "Hello 👋",
+  "headerTaglineTwo": "I'm Mia Gayapersad - curious",
+  "headerTaglineThree": "digital artist & aspiring software developer",
+  "headerTaglineFour": "based in Trinidad & Tobago.",
+  "showCursor": true,
+  "showBlog": false,
+  "darkMode": true,
+  "showResume": true,
+  "resume": {
+    "resumeUrl": "/Mia_Gayapersad_resume.pdf"
+  },
+  "socials": [
+    {
+      "id": "1",
+      "title": "Github",
+      "link": "https://github.com/mializzie"
+    },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/miagayapersad"
+    },
+    {
+      "id": "3",
+      "title": "Email",
+      "link": "mailto:gayapersadmia@gmail.com"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Digital Art Portfolio",
+      "description": "A showcase of my digital artwork and creative projects, highlighting visual storytelling and design skills.",
+      "imageSrc": "/images/digital-art.png",
+      "url": "https://github.com/mializzie"
+    },
+    {
+      "id": "2",
+      "title": "Interactive Literary Website",
+      "description": "Designed and developed an interactive website based on 'I Used to Live Here Once', translating literary themes into a digital experience. Implemented responsive design and interactive elements to enhance storytelling and user engagement.",
+      "imageSrc": "/images/literary-site.png",
+      "url": "https://iusedtolivehereonce.vercel.app/"
+    },
+    {
+      "id": "3",
+      "title": "Styl GIF Gallery",
+      "description": "An interactive GIF gallery showcasing animated digital artwork and styled visual content.",
+      "imageSrc": "/images/styl-gif.png",
+      "url": "https://styl-gif.vercel.app/index.html#gifs"
+    },
+    {
+      "id": "4",
+      "title": "Art Site",
+      "description": "A personal art website displaying original digital artwork and creative explorations.",
+      "imageSrc": "/images/art-site.png",
+      "url": "https://art-site-snowy.vercel.app/index.html"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Digital Art",
+      "description": "Creating digital artwork, illustrations, and visual designs for personal and professional projects."
+    },
+    {
+      "id": "2",
+      "title": "Creative Coding",
+      "description": "Building interactive web-based projects that combine programming with visual creativity."
+    },
+    {
+      "id": "3",
+      "title": "Web Development",
+      "description": "Designing and developing responsive websites and digital experiences with a focus on usability and aesthetics."
+    }
+  ],
+  "aboutpara": "I'm Mia Gayapersad from Trinidad, a digital artist and aspiring software developer. I blend creativity with technology to create artwork, web projects, and interactive experiences. My work is driven by curiosity, exploration, and a passion for building meaningful digital solutions.",
+  "languages": ["JavaScript", "HTML5", "CSS", "Python"],
+  "frameworks": ["React", "NodeJs"],
+  "others": ["Figma", "Adobe Photoshop", "Adobe Illustrator"]
 }
-],
-"projects": [
-{
-"id": "1",
-"title": "Digital Art Portfolio",
-"description": "A showcase of my digital artwork and creative projects, highlighting visual storytelling and design skills.",
-"imageSrc": "/images/digital-art.png",
-"url": "https://github.com/mializzie"
-},
-{
-"id": "2",
-"title": "Interactive Literary Website",
-"description": "Designed and developed an interactive website based on 'I Used to Live Here Once', translating literary themes into a digital experience. Implemented responsive design and interactive elements to enhance storytelling and user engagement.",
-"imageSrc": "/images/literary-site.png",
-"url": "https://iusedtolivehereonce.vercel.app/"
-}
-],
-"services": [
-{
-"id": "1",
-"title": "Digital Art",
-"description": "Creating digital artwork, illustrations, and visual designs for personal and professional projects."
-},
-{
-"id": "2",
-"title": "Creative Coding",
-"description": "Building interactive web-based projects that combine programming with visual creativity."
-},
-{
-"id": "3",
-"title": "Web Development",
-"description": "Designing and developing responsive websites and digital experiences with a focus on usability and aesthetics."
-}
-],
-"aboutpara": "I'm Mia Gayapersad from Trinidad, a digital artist and aspiring software developer. I blend creativity with technology to create artwork, web projects, and interactive experiences. My work is driven by curiosity, exploration, and a passion for building meaningful digital solutions.",
-"languages": ["JavaScript", "HTML5", "CSS", "Python"],
-"frameworks": ["React", "NodeJs"],
-"others": ["Figma", "Adobe Photoshop", "Adobe Illustrator"]
-}
-
-
