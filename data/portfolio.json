@@ -41,7 +41,7 @@
       "title": "Digital Art Portfolio",
       "description": "A showcase of my digital artwork and creative projects, highlighting visual storytelling and design skills.",
       "imageSrc": "/images/digital-art.png",
-      "url": "https://github.com/mializzie"
+      "url": "https://art-site-snowy.vercel.app/index.html"
     },
     {
       "id": "2",
@@ -57,14 +57,6 @@
       "imageSrc": "/images/styl-site.png",
       "url": "https://styl-gif.vercel.app/index.html#gifs"
     },
-    {
-      "id": "4",
-      "title": "Art Site",
-      "description": "A personal art website displaying original digital artwork and creative explorations.",
-      "imageSrc": "/images/digital-art.png",
-      "url": "https://art-site-snowy.vercel.app/index.html"
-    }
-  ],
   "services": [
     {
       "id": "1",
