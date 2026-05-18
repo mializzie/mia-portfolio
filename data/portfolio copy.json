@@ -1,70 +1,81 @@
 {
-"name": "Mia Gayapersad",
-"headerTaglineOne": "Hello 👋",
-"headerTaglineTwo": "I'm Mia Gayapersad - curious",
-"headerTaglineThree": "digital artist & aspiring software developer",
-"headerTaglineFour": "based in Trinidad & Tobago.",
-"showCursor": true,
-"showBlog": false,
-"darkMode": true,
-"showResume": true,
-"resume": {
-"resumeUrl": "/Mia_Gayapersad_resume.pdf"
-},
-"socials": [
-{
-"id": "1",
-"title": "Github",
-"link": "https://github.com/mializzie"
-},
-{
-"id": "2",
-"title": "LinkedIn",
-"link": "https://www.linkedin.com/in/miagayapersad"
-},
-{
-"id": "3",
-"title": "Email",
-"link": "mailto:gayapersadmia@gmail.com"
+  "name": "Mia Gayapersad",
+  "headerTaglineOne": "Hello 👋",
+  "headerTaglineTwo": "I'm Mia Gayapersad - curious",
+  "headerTaglineThree": "digital artist & aspiring software developer",
+  "headerTaglineFour": "based in Trinidad & Tobago.",
+  "showCursor": true,
+  "showBlog": false,
+  "darkMode": true,
+  "showResume": true,
+  "resume": {
+    "resumeUrl": "/Mia_Gayapersad_resume.pdf",
+    "tagline": "Computer Science Student & Digital Artist",
+    "description": "As a Computer Science student, I am passionate about cybersecurity and database management, with a firm belief that every privacy breach has a solution. I am dedicated to working hard and applying my skills in programming, digital design, and system security efficiently and effectively in a flexible role.",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "January 2020 - 2026",
+        "type": "Part-time",
+        "position": "Sales Associate — Tech Universe Ltd",
+        "bullets": "Built in-depth knowledge of 100+ inventory items to provide accurate technical guidance and product recommendations | Designed and customized digital advertisements using Canva contributing to an estimated 20% increase in customer response to promotions | Collaborated with sales and marketing efforts to deliver clear high-impact promotional materials improving overall customer satisfaction"
+      }
+    ],
+    "education": {
+      "universityName": "University of the West Indies — BSc Computer Science",
+      "universityDate": "Graduating 2026",
+      "universityPara": "St Augustine Girls' High School (2015–2022): CAPE Passes in 6 units including Computer Science, IT, and Economics. CSEC Passes in 8 subjects including Math, English, IT, and Physics."
+    },
+    "languages": ["JavaScript", "HTML5", "CSS", "Python", "C++", "Java"],
+    "frameworks": ["React", "NodeJs"],
+    "others": ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Database & SQL", "Graphic Design"]
+  },
+  "socials": [
+    { "id": "1", "title": "Github", "link": "https://github.com/mializzie" },
+    { "id": "2", "title": "LinkedIn", "link": "https://www.linkedin.com/in/miagayapersad" },
+    { "id": "3", "title": "Email", "link": "mailto:gayapersadmia@gmail.com" }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Digital Art Portfolio",
+      "description": "A showcase of my digital artwork and creative projects, highlighting visual storytelling and design skills.",
+      "imageSrc": "/images/digital-art.png",
+      "url": "https://art-site-snowy.vercel.app/index.html"
+    },
+    {
+      "id": "2",
+      "title": "Interactive Literary Website",
+      "description": "Designed and developed an interactive website based on 'I Used to Live Here Once', translating literary themes into a digital experience. Implemented responsive design and interactive elements to enhance storytelling and user engagement.",
+      "imageSrc": "/images/literary-site.png",
+      "url": "https://iusedtolivehereonce.vercel.app/"
+    },
+    {
+      "id": "3",
+      "title": "Styl GIF Gallery",
+      "description": "An interactive GIF gallery showcasing animated digital artwork and styled visual content.",
+      "imageSrc": "/images/styl-site.png",
+      "url": "https://styl-gif.vercel.app/index.html#gifs"
+    },
+  "services": [
+    {
+      "id": "1",
+      "title": "Digital Art",
+      "description": "Creating digital artwork, illustrations, and visual designs for personal and professional projects."
+    },
+    {
+      "id": "2",
+      "title": "Creative Coding",
+      "description": "Building interactive web-based projects that combine programming with visual creativity."
+    },
+    {
+      "id": "3",
+      "title": "Web Development",
+      "description": "Designing and developing responsive websites and digital experiences with a focus on usability and aesthetics."
+    }
+  ],
+  "aboutpara": "I'm Mia Gayapersad from Trinidad, a Computer Science student, digital artist, and aspiring software developer. I blend creativity with technology to create artwork, web projects, and interactive experiences. My work is driven by curiosity, exploration, and a passion for building meaningful digital solutions.",
+  "languages": ["JavaScript", "HTML5", "CSS", "Python", "C++", "Java"],
+  "frameworks": ["React", "NodeJs"],
+  "others": ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Database & SQL", "Graphic Design"]
 }
-],
-"projects": [
-{
-"id": "1",
-"title": "Digital Art Portfolio",
-"description": "A showcase of my digital artwork and creative projects, highlighting visual storytelling and design skills.",
-"imageSrc": "/images/digital-art.png",
-"url": "https://github.com/mializzie"
-},
-{
-"id": "2",
-"title": "Interactive Literary Website",
-"description": "Designed and developed an interactive website based on 'I Used to Live Here Once', translating literary themes into a digital experience. Implemented responsive design and interactive elements to enhance storytelling and user engagement.",
-"imageSrc": "/images/literary-site.png",
-"url": "https://iusedtolivehereonce.vercel.app/"
-}
-],
-"services": [
-{
-"id": "1",
-"title": "Digital Art",
-"description": "Creating digital artwork, illustrations, and visual designs for personal and professional projects."
-},
-{
-"id": "2",
-"title": "Creative Coding",
-"description": "Building interactive web-based projects that combine programming with visual creativity."
-},
-{
-"id": "3",
-"title": "Web Development",
-"description": "Designing and developing responsive websites and digital experiences with a focus on usability and aesthetics."
-}
-],
-"aboutpara": "I'm Mia Gayapersad from Trinidad, a digital artist and aspiring software developer. I blend creativity with technology to create artwork, web projects, and interactive experiences. My work is driven by curiosity, exploration, and a passion for building meaningful digital solutions.",
-"languages": ["JavaScript", "HTML5", "CSS", "Python"],
-"frameworks": ["React", "NodeJs"],
-"others": ["Figma", "Adobe Photoshop", "Adobe Illustrator"]
-}
-
-
